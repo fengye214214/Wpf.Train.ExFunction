@@ -61,6 +61,7 @@ namespace Wpf.Train.UI
             Navigation(VoiceDispatchPage);
 
             com_changeSkin.ItemsSource = SkinViewModel.SkinResList;
+            //测试
             com_changeSkin.SelectedIndex = 0;
         }
 
