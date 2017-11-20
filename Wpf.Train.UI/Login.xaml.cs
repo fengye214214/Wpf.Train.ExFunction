@@ -87,6 +87,10 @@ namespace Wpf.Train.UI
                 Thread.Sleep(TimeSpan.FromSeconds(2));
                 Dispatcher.BeginInvoke(new Action(() =>
                 {
+                    //登录成功后，保存用户信息
+                    XMLHelper<UserViewModel>.SerializeAndSave(userContext, xmlPath);
+                    //缓存用户信息
+                    SysVars.UserInfo = userContext;
                     var mainWin = new MainWindow();
                     mainWin.Show();
                     this.Close();

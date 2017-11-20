@@ -38,12 +38,8 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ZED3.ChenAnConsole.Common\Lib\net40-full\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Windows.Shell">
-      <HintPath>..\ZED3.ChenAnConsole.CustomControlLib\Lib\Microsoft.Windows.Shell.dll</HintPath>
+      <HintPath>..\Wpf.Train.CustomControlLib\Lib\Microsoft.Windows.Shell.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -60,13 +56,13 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="WPFToolkit">
-      <HintPath>..\ZED3.ChenAnConsole.CustomControlLib\Lib\WPFToolkit.dll</HintPath>
+      <HintPath>..\Wpf.Train.CustomControlLib\Lib\WPFToolkit.dll</HintPath>
     </Reference>
     <Reference Include="WPFVisifire.Charts">
-      <HintPath>..\ZED3.ChenAnConsole.CustomControlLib\Lib\WPFVisifire.Charts.dll</HintPath>
+      <HintPath>..\Wpf.Train.CustomControlLib\Lib\WPFVisifire.Charts.dll</HintPath>
     </Reference>
     <Reference Include="Xceed.Wpf.Toolkit">
-      <HintPath>..\ZED3.ChenAnConsole.CustomControlLib\Lib\Xceed.Wpf.Toolkit.dll</HintPath>
+      <HintPath>..\Wpf.Train.CustomControlLib\Lib\Xceed.Wpf.Toolkit.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Converter\" />
+    <Folder Include="Resources\" />
     <Folder Include="UserControl\" />
     <Folder Include="Views\Broadcast\" />
     <Folder Include="Views\Intercom\" />
@@ -190,9 +187,6 @@
       <Project>{77dbf6ea-4d58-4298-a106-b3a29e9e3dc5}</Project>
       <Name>Wpf.Train.Entiry</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Demo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
