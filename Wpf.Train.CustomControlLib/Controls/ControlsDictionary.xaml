@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--存放Controls文件夹下的样式，这里面的控件都是重写了基本控件-->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Controls/WindowBase.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

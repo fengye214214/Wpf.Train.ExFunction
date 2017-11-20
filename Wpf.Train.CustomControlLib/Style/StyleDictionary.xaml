@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--存放Style/BaseThemes文件夹下的样式，此资源字典只存放重新定义了ControlTemplate的资源-->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/Button.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/TextBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/TextBlock.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/CheckBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/ComboBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/DataGrid.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/Label.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/ListBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/RadioButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/TabControl.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/ListView.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/TreeView.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/ProgressBar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/Expander.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/ToggleButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/ScrollViewer.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--最后设置基本控件的默认样式-->
+    <!--此处必须用静态 StaticResource-->
+    <Style TargetType="Label" BasedOn="{StaticResource LabelBaseStyle}"></Style>
+    <Style TargetType="Button" BasedOn="{StaticResource ButtonBaseStyle}"/>
+</ResourceDictionary>

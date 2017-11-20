@@ -1,0 +1,24 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Wpf.Train.CustomControlLib">
+
+    <!--Generic.xaml文件的名字不能修改，这是自定义用户空间库自动生成的资源文件，发现修改名字后会出现错误-->
+    <ResourceDictionary.MergedDictionaries>
+
+        <!--公共样式定义，此资源字典是为了：自定义空间库，自定义样式中可能用到的公共的样式，估计会很少用到，先定义下来，已备后面可能会使用到-->
+        <!--必须用DynamicResource，使用资源中的Key值，把颜色属性提取出一个单独的资源文件用StaticResource会出现：“{DependencyProperty.UnsetValue}”不是属性“Background”的有效值。的错误-->
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/StyleShared.xaml" />
+        
+        <!--存放Style/BaseThemes文件夹下的样式，此资源字典只存放重新定义了ControlTemplate的资源-->
+        <!--必须用DynamicResource，使用资源中的Key值，把颜色属性提取出一个单独的资源文件用StaticResource会出现：“{DependencyProperty.UnsetValue}”不是属性“Background”的有效值。的错误-->
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/StyleDictionary.xaml" />
+        
+        <!--存放Controls文件夹下的样式，这里面的控件都是重写了基本控件-->
+        <!--把自定义控件库放在样式的后面，是因为自定义空间库会使用到Style/BaseThemes里面写的样式-->
+        <!--必须用DynamicResource，使用资源中的Key值，把颜色属性提取出一个单独的资源文件用StaticResource会出现：“{DependencyProperty.UnsetValue}”不是属性“Background”的有效值。的错误-->
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Controls/ControlsDictionary.xaml" />
+        
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

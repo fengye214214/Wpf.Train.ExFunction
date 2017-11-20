@@ -1,0 +1,30 @@
+﻿<local:PageBase x:Class="Wpf.Train.UI.DemoPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Wpf.Train.UI"
+        Title="DemoPage" Height="300" Width="800" Loaded="PageBase_Loaded">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            
+            <StackPanel Orientation="Horizontal">
+                <Label>我是导航示例</Label>
+                <Label x:Name="txt_name"></Label>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                <Button  Content="点击我显示详情" Margin="5" Click="Button_Click"></Button>
+                <Button Content="等待框"  Margin="5"  Click="Button_Click_1"></Button>
+                <Button Content="我是新窗体" Margin="5" Click="Button_Click_2"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Button Content="消息提示框"  Margin="5" x:Name="btn_info" Click="btn_info_Click"></Button>
+                <Button Content="警告提示框" Margin="5" x:Name="btn_war" Click="btn_war_Click"/>
+                <Button Content="错误提示框"  Margin="5" x:Name="btn_error" Click="btn_error_Click"/>
+                <Button Content="询问提示"  Margin="5" x:Name="btn_tip" Click="btn_tip_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+
+    </Grid>
+</local:PageBase>

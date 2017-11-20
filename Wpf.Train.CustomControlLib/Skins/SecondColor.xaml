@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--黑色背景-->
+    <!--系统窗体边框阴影-->
+    <DropShadowEffect x:Key="WindowDropShadow" BlurRadius="5" Color="#FF858484"  ShadowDepth="0"/>
+    <!--系统窗体主要背景色-->
+    <SolidColorBrush x:Key="SysWindowBackground" Color="#22252D"/>
+    <!--系统窗体默认边框色-->
+    <SolidColorBrush x:Key="SysWindowBorder" Color="#444444"/>
+    <!--系统窗体文本颜色-->
+    <SolidColorBrush x:Key="SysWindowForeground" Color="#B6BFD0"/>
+    <!--标题栏背景-->
+    <SolidColorBrush x:Key="SysWindowCaptionBackground" Color="#3D4350"/>
+
+    <!--按钮字体颜色-->
+    <SolidColorBrush x:Key="ButtonForeground" Color="#A7B0C0"/>
+    <!--按钮字体-->
+    <FontFamily x:Key="ButtonFontFamily" >Microsoft YaHei</FontFamily>
+    <!--按钮背景色-->
+    <SolidColorBrush x:Key="ButtonBackground"  Color="#2E3138"/>
+    <!--按钮悬浮背景颜色-->
+    <SolidColorBrush x:Key="ButtonMouseOverBackground" Color="#3D4350"/>
+</ResourceDictionary>

@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <!--颜色资源文件必须放到其他所有资源文件前面，因为其他资源文件要用到颜色资文件中的值-->
+        <!--因为要支持动态换控件颜色，所以把颜色单独提出一个资源字典，使用资源字典里的方式是：{DynamicResource SysWindowBackground}-->
+        <!--必须用DynamicResource，一方面是因为要支持动态换肤，一方面把颜色属性提取出一个单独的资源文件用StaticResource会出现：“{DependencyProperty.UnsetValue}”不是属性“Background”的有效值。的错误-->
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Skins/SecondColor.xaml" />
+        
+        <!--所有定义的控件样式放在Global资源文件中-->
+        <!--必须用DynamicResource，使用颜色资源中的Key值，把颜色属性提取出一个单独的资源文件用StaticResource会出现：“{DependencyProperty.UnsetValue}”不是属性“Background”的有效值。的错误-->
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Themes/Generic.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

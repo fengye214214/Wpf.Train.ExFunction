@@ -1,0 +1,18 @@
+﻿<local:PageBase x:Class="Wpf.Train.UI.DemoDetailPage"
+      xmlns:local="clr-namespace:Wpf.Train.UI"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300" Loaded="PageBase_Loaded"
+	Title="DemoDetailPage">
+
+    <Grid>
+        <StackPanel>
+            <Label x:Name="txt_details">我是详情</Label>
+            <Label x:Name="txt_name" HorizontalAlignment="Center"></Label>
+            <Button Content="返回上一页" Click="Button_Click"></Button>
+        </StackPanel>
+    </Grid>
+</local:PageBase>
