@@ -19,7 +19,7 @@
                     <ColumnDefinition Width="auto"/>
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Width="50" Height="50" Margin="5" Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/ImgResources/about_logo.png"></Image>
+                <Image Grid.Column="0" Width="50" Height="50" Margin="5" Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/ImgResources/btn_close.png"></Image>
                 <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold">导航页面框架</TextBlock>
                 <TextBlock Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">测试1</TextBlock>
                 <Button Grid.Column="3" Margin="5" Style="{StaticResource ButtonImgStyle}" Click="Button_Click">
@@ -29,9 +29,9 @@
         </Border>
         <!--导航区域-->
         <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <Button x:Name="btn_voice" Content="语音调度" Width="80" Margin="5" Click="btn_voice_Click"></Button>
-            <Button x:Name="btn_video" Content="视频调度" Width="80" Margin="5" Click="btn_video_Click"></Button>
-            <Button x:Name="btn_msg" Content="短消息" Width="80" Margin="5" Click="btn_msg_Click"></Button>
+            <Button x:Name="btn_voice" Content="调度页面一" Width="80" Margin="5" Click="btn_voice_Click"></Button>
+            <Button x:Name="btn_video" Content="调度页面二" Width="80" Margin="5" Click="btn_video_Click"></Button>
+            <Button x:Name="btn_msg" Content="调度页面三" Width="80" Margin="5" Click="btn_msg_Click"></Button>
             <Button x:Name="btn_demo" Content="示例导航" Width="80" Margin="5" Click="btn_demo_Click"/>
             <Label Margin="5">换肤</Label>
             <ComboBox x:Name="com_changeSkin" Margin="0 5 5 5" Width="100" DisplayMemberPath="Remark" SelectionChanged="com_changeSkin_SelectionChanged"></ComboBox>

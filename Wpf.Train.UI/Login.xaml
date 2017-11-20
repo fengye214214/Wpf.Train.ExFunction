@@ -28,8 +28,8 @@
             <Label Grid.Row="1" Grid.Column="0" Content="密码"/>
             <PasswordBox Grid.Row="1" Grid.Column="1" x:Name="txt_pwd" Grid.ColumnSpan="2" PasswordChar="{Binding LoginPwd,Mode=TwoWay}"/>
 
-            <Label Grid.Row="2" Grid.Column="0" Content="服务器IP"/>
-            <TextBox Grid.Row="2" Grid.Column="1" x:Name="txt_serverIP" Text="{Binding ServerIP,Mode=TwoWay}" Grid.ColumnSpan="2"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="服务器IP" Visibility="Collapsed"/>
+            <TextBox Grid.Row="2" Grid.Column="1" x:Name="txt_serverIP" Visibility="Collapsed" Text="{Binding ServerIP,Mode=TwoWay}" Grid.ColumnSpan="2"/>
 
             <Label Grid.Row="3" Grid.Column="0" Content="本机IP"/>
             <ComboBox Grid.Row="3" Grid.Column="1" x:Name="txt_hostIP" ItemsSource="{Binding HostIP}" SelectedValue="{Binding SelectHostIP,Mode=TwoWay}" Text="{Binding SelectHostIP,Mode=TwoWay}" Grid.ColumnSpan="2"/>

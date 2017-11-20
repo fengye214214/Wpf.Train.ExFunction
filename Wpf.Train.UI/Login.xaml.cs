@@ -46,7 +46,7 @@ namespace Wpf.Train.UI
         private void WindowBase_Loaded(object sender, RoutedEventArgs e)
         {
             //此行代码说明见WindowBase类的注释
-            this.Height = this.Height - 20;
+            this.Height = this.Height - 40;
             //如果存在xml文件，读取用户信息
             if (File.Exists(xmlPath))
             {

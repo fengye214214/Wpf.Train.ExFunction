@@ -229,7 +229,6 @@
     <Content Include="Lib\WPFToolkit.dll" />
     <Content Include="Lib\WPFVisifire.Charts.dll" />
     <Content Include="Lib\Xceed.Wpf.Toolkit.dll" />
-    <Resource Include="ImgResources\about_logo.png" />
     <Resource Include="ImgResources\ajax-loader.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

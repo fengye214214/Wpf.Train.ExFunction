@@ -9,7 +9,7 @@
 	Title="VoiceDispatch">
 
     <Grid>
-        <Label >我是声音调度</Label>
+        <Label >我是调度页面一</Label>
         
     </Grid>
 </local:PageBase>

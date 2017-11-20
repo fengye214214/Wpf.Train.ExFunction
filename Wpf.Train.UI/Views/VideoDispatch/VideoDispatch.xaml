@@ -10,7 +10,7 @@
 
     <Grid>
         <StackPanel>
-            <Label Margin="5">视频调度</Label>
+            <Label Margin="5">调度页面二</Label>
             <Label x:Name="txt_name" HorizontalAlignment="Center">我是page1</Label>
             <Button  Content="主页面方法" Click="Button_Click"></Button>
             

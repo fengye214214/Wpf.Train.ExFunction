@@ -10,7 +10,7 @@
 
     <Grid>
         <StackPanel>
-            <Label Margin="5">短消息</Label>
+            <Label Margin="5">调度页面三</Label>
         </StackPanel>
     </Grid>
 </local:PageBase>
