@@ -20,4 +20,11 @@
     <SolidColorBrush x:Key="ButtonBackground"  Color="#2E3138"/>
     <!--按钮悬浮背景颜色-->
     <SolidColorBrush x:Key="ButtonMouseOverBackground" Color="#3D4350"/>
+
+    <!--文本框背景色-->
+    <SolidColorBrush x:Key="TextBoxBackground" Color="#333337"/>
+    <!--文本框边框色-->
+    <SolidColorBrush x:Key="TextBoxBorad" Color="#B7D9ED"/>
+    <!--文本汉字颜色-->
+    <SolidColorBrush x:Key="TextForeground" Color="#F1F1F1"/>
 </ResourceDictionary>

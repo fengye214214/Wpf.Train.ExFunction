@@ -5,6 +5,8 @@
 
     <!--Generic.xaml文件的名字不能修改，这是自定义用户空间库自动生成的资源文件，发现修改名字后会出现错误-->
     <ResourceDictionary.MergedDictionaries>
+        <!--文本字体图片 先写到这，在具体的资源文件想让文本字体图片有效果，还得在单独引用下面这行资源-->
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/FIcon.xaml" />
 
         <!--公共样式定义，此资源字典是为了：自定义空间库，自定义样式中可能用到的公共的样式，估计会很少用到，先定义下来，已备后面可能会使用到-->
         <!--必须用DynamicResource，使用资源中的Key值，把颜色属性提取出一个单独的资源文件用StaticResource会出现：“{DependencyProperty.UnsetValue}”不是属性“Background”的有效值。的错误-->

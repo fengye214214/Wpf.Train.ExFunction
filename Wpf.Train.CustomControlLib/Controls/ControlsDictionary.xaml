@@ -4,5 +4,8 @@
     <!--存放Controls文件夹下的样式，这里面的控件都是重写了基本控件-->
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Controls/WindowBase.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Controls/ImgButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Controls/TextBoxWatermark.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Controls/ExComboBox.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -11,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Wpf.Train.CustomControlLib;
 
 namespace Wpf.Train.UI
 {
@@ -30,7 +32,50 @@ namespace Wpf.Train.UI
             {
                 return;
             }
+            var list = new List<string>() { "1", "2", "3", "4" };
+            exCom.ItemsSource = list;
+        }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            WaitingWinBox.ShowDialog(new Action(() =>
+            {
+                Thread.Sleep(5000);
+            }));
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            var nw = new NewWindow();
+            nw.Show();
+        }
+
+        private void btn_info_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxEx.ShowInfo("我是提示信息！");
+        }
+
+        private void btn_war_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxEx.ShowWarn("我是警告信息！我是警告信息！我是警告信息！我是警告信息！我是警告信息！我是警告信息！我是警告信息！我是警告信息！我是警告信息！我是警告信息！");
+        }
+
+        private void btn_error_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxEx.ShowError("我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，我是错误，");
+        }
+
+        private void btn_tip_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBoxEx.ShowQuestion("确认删除？");
+            if (result)
+            {
+                MessageBox.Show("true");
+            }
+            else
+            {
+                MessageBox.Show("false");
+            }
         }
     }
 }

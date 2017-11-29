@@ -61,30 +61,30 @@ namespace Wpf.Train.UI
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
             userContext.LoginPwd = txt_pwd.Password;
-            if (String.IsNullOrEmpty(userContext.LoginName))
-            {
-                MessageBoxEx.ShowInfo("请输入用户名！");
-                return;
-            }
-            if (String.IsNullOrEmpty(userContext.LoginPwd))
-            {
-                MessageBoxEx.ShowInfo("请输入密码！");
-                return;
-            }
-            if (String.IsNullOrEmpty(txt_hostIP.SelectedItem.ToString()))
-            {
-                MessageBoxEx.ShowInfo("请输入本机IP！");
-                return;
-            }
-            if (String.IsNullOrEmpty(userContext.ServerIP))
-            {
-                MessageBoxEx.ShowInfo("请输入服务器IP！");
-                return;
-            }
+            //if (String.IsNullOrEmpty(userContext.LoginName))
+            //{
+            //    MessageBoxEx.ShowInfo("请输入用户名！");
+            //    return;
+            //}
+            //if (String.IsNullOrEmpty(userContext.LoginPwd))
+            //{
+            //    MessageBoxEx.ShowInfo("请输入密码！");
+            //    return;
+            //}
+            //if (String.IsNullOrEmpty(txt_hostIP.SelectedItem.ToString()))
+            //{
+            //    MessageBoxEx.ShowInfo("请输入本机IP！");
+            //    return;
+            //}
+            //if (String.IsNullOrEmpty(userContext.ServerIP))
+            //{
+            //    MessageBoxEx.ShowInfo("请输入服务器IP！");
+            //    return;
+            //}
 
             WaitingWinBox.ShowDialog(new Action(() =>
             {
-                Thread.Sleep(TimeSpan.FromSeconds(2));
+                //Thread.Sleep(TimeSpan.FromSeconds(1));
                 Dispatcher.BeginInvoke(new Action(() =>
                 {
                     //登录成功后，保存用户信息

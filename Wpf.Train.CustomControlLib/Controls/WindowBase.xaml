@@ -6,7 +6,7 @@
     <!--必须用DynamicResource，使用资源中的Key值，把颜色属性提取出一个单独的资源文件用StaticResource会出现：“{DependencyProperty.UnsetValue}”不是属性“Background”的有效值。的错误-->
     <!--新加的控件要增加到ControlsDictionary.xaml资源字典中-->
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Style/BaseThemes/Button.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Controls/ImgButton.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <!--默认模板-->
@@ -30,16 +30,17 @@
                         <!--标题栏左侧汉字-->
                         <StackPanel x:Name="PART_Header" Height="{TemplateBinding CaptionHeight}" Margin="5 0 0 0" Orientation="Horizontal"  VerticalAlignment="Center">
                             <!--这样做的目的是字体颜色跟谁系统-->
-                            <Label>
+                            <Label x:Name="lab_header">
                                 <TextBlock VerticalAlignment="Center" Margin="0 0 0 0" FontSize="{TemplateBinding HeaderFontSize}" Text="{TemplateBinding Title}"/>
                             </Label>
                         </StackPanel>
                         <!--右侧关闭按钮-->
                         <StackPanel x:Name="PART_HeaderClose" Grid.Column="1" Height="{TemplateBinding CaptionHeight}" Orientation="Horizontal" VerticalAlignment="Center">
-                            <Button  Cursor="Hand" shell:WindowChrome.IsHitTestVisibleInChrome="True" Style="{StaticResource ButtonImgStyle}" ToolTip="关闭"
-                                    Command="{Binding Path=CloseWindowCommand,RelativeSource={RelativeSource TemplatedParent}}">
-                                <Image Margin="5" Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/ImgResources/mainwnd_close.png"></Image>
-                            </Button>
+                            <local:ImgButton  Cursor="Hand" shell:WindowChrome.IsHitTestVisibleInChrome="True" Style="{StaticResource ImgButtonOnlyShowImage}" ToolTip="关闭"
+                                    Command="{Binding Path=CloseWindowCommand,RelativeSource={RelativeSource TemplatedParent}}" 
+                                              FIcon="&#xe60a;" Foreground="{Binding Foreground, ElementName=lab_header}" FIconSize="10" 
+                                              MouseOverFIconForeground="Red" IsAnimation="True" FIconMargin="5 0 0 3"> 
+                            </local:ImgButton>
                         </StackPanel>
                     </Grid>
                 </Border>

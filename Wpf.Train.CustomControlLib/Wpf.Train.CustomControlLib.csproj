@@ -65,6 +65,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\ControlAttachProperty.cs" />
+    <Compile Include="Controls\ExComboBox.xaml.cs">
+      <DependentUpon>ExComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImgButton.xaml.cs">
+      <DependentUpon>ImgButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TextBoxWatermark.xaml.cs">
+      <DependentUpon>TextBoxWatermark.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\WindowBase.xaml.cs">
       <DependentUpon>WindowBase.xaml</DependentUpon>
     </Compile>
@@ -72,9 +82,21 @@
       <DependentUpon>WaitingWinBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Common\ControlUtils.cs" />
+    <Page Include="Controls\ExComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ImgButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\MessageBoxEx.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TextBoxWatermark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Style\BaseThemes\Button.xaml">
       <SubType>Designer</SubType>
@@ -133,6 +155,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Style\BaseThemes\TreeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Style\FIcon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -211,6 +237,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="ImgResources\FontImage\iconfont.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -225,6 +252,10 @@
     <Resource Include="ImgResources\deltext.png" />
     <Resource Include="ImgResources\mainwnd_close.png" />
     <Resource Include="ImgResources\btn_close.png" />
+    <Content Include="ImgResources\FontImage\demo.css" />
+    <Content Include="ImgResources\FontImage\demo.html" />
+    <Content Include="ImgResources\FontImage\iconfont.css" />
+    <Resource Include="ImgResources\FontImage\Remark.txt" />
     <Content Include="Lib\Microsoft.Windows.Shell.dll" />
     <Content Include="Lib\WPFToolkit.dll" />
     <Content Include="Lib\WPFVisifire.Charts.dll" />

@@ -4,13 +4,40 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Wpf.Train.UI"
+      xmlns:cus ="clr-namespace:Wpf.Train.CustomControlLib;assembly=Wpf.Train.CustomControlLib"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300" Loaded="PageBase_Loaded"
+      d:DesignHeight="300" d:DesignWidth="1000" Loaded="PageBase_Loaded"
 	Title="Messages">
 
     <Grid>
         <StackPanel>
             <Label Margin="5">调度页面三</Label>
+
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Button Content="等待框"  Margin="5"  Click="Button_Click_1"></Button>
+                <Button Content="我是新窗体" Margin="5" Click="Button_Click_2"/>
+                <Button Content="消息提示框"  Margin="5" x:Name="btn_info" Click="btn_info_Click"></Button>
+                <Button Content="警告提示框" Margin="5" x:Name="btn_war" Click="btn_war_Click"/>
+                <Button Content="错误提示框"  Margin="5" x:Name="btn_error" Click="btn_error_Click"/>
+                <Button Content="询问提示"  Margin="5" x:Name="btn_tip" Click="btn_tip_Click"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <cus:ImgButton FIcon="&#xe602;" Margin="2,0,5,0">图片按钮</cus:ImgButton>
+                <cus:ImgButton Margin="2 0 0 0" FIcon="&#xe601;" MouseOverFIconForeground="Yellow">悬浮文字变色</cus:ImgButton>
+                <cus:ImgButton Margin="2 0 0 0" FIcon="&#xe63c;" CornerRadius="10" MouseOverFIconForeground="Red">图片圆角按钮</cus:ImgButton>
+                <cus:ImgButton Margin="2 0 0 0" FIcon="&#xe633;" IsAnimation="True">图片动画显示</cus:ImgButton>
+                <cus:ImgButton Margin="2 0 0 0" FIcon="&#xe60c;" MouseOverFIconForeground="Yellow" Style="{StaticResource ImgButtonOnlyShowImage}"></cus:ImgButton>
+                <cus:ImgButton Margin="2 0 0 0" FIcon="&#xe60c;" MouseOverFIconForeground="Yellow" IsAnimation="True" Style="{StaticResource ImgButtonOnlyShowImage}"></cus:ImgButton>
+                <cus:ImgButton Margin="2 0 0 0" FIcon="&#xe60c;" Foreground="Red" MouseOverBackground="Red"  Style="{StaticResource ImgButtonOnlyShowImage}"></cus:ImgButton>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <cus:TextBoxWatermark Margin="3,3,0,0" Width="150" Watermark="我是水印" ></cus:TextBoxWatermark>
+                <cus:TextBoxWatermark Margin="3,3,0,0" Width="250" Height="25" AttButtonType="OpenFilePathDialog" Watermark="打开文件路径..."></cus:TextBoxWatermark>
+                <cus:ExComboBox x:Name="exCom" Margin="3,3,0,0" Width="100"></cus:ExComboBox>
+            </StackPanel>
         </StackPanel>
+
     </Grid>
 </local:PageBase>

@@ -7,9 +7,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300" Loaded="PageBase_Loaded"
 	Title="VoiceDispatch">
-
     <Grid>
         <Label >我是调度页面一</Label>
-        
+        <Button  Content="主页面方法" Width="100" Click="Button_Click"></Button>
     </Grid>
 </local:PageBase>

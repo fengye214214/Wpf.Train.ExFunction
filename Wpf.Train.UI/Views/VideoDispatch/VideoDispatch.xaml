@@ -11,8 +11,8 @@
     <Grid>
         <StackPanel>
             <Label Margin="5">调度页面二</Label>
-            <Label x:Name="txt_name" HorizontalAlignment="Center">我是page1</Label>
-            <Button  Content="主页面方法" Click="Button_Click"></Button>
+            <Label x:Name="txt_name" HorizontalAlignment="Center" FontSize="25">我是page1</Label>
+            <Button  Content="主页面方法" Width="100" Click="Button_Click"></Button>
             
         </StackPanel>
     </Grid>

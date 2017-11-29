@@ -34,6 +34,9 @@ namespace Wpf.Train.UI
             }
         }
 
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ParentWindow.CallParentWindowMethod("我调用的是主页面方法！");
+        }
     }
 }

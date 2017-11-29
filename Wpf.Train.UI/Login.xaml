@@ -23,7 +23,7 @@
                 <ColumnDefinition Width="197*"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" Content="用户名"/>
-            <TextBox Grid.Row="0" Grid.Column="1" x:Name="txt_userName" Text="{Binding LoginName, Mode=TwoWay}" Grid.ColumnSpan="2"/>
+            <zed:TextBoxWatermark Grid.Row="0" Grid.Column="1" x:Name="txt_userName" Watermark="请输入姓名" Text="{Binding LoginName, Mode=TwoWay}" Grid.ColumnSpan="2"/>
 
             <Label Grid.Row="1" Grid.Column="0" Content="密码"/>
             <PasswordBox Grid.Row="1" Grid.Column="1" x:Name="txt_pwd" Grid.ColumnSpan="2" PasswordChar="{Binding LoginPwd,Mode=TwoWay}"/>

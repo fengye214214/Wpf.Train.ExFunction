@@ -10,8 +10,8 @@
 
     <Grid>
         <StackPanel>
-            <Label x:Name="txt_details">我是详情</Label>
-            <Label x:Name="txt_name" HorizontalAlignment="Center"></Label>
+            <Label x:Name="txt_details" FontSize="25">我是详情</Label>
+            <Label x:Name="txt_name" HorizontalAlignment="Center" FontSize="25"></Label>
             <Button Content="返回上一页" Click="Button_Click"></Button>
         </StackPanel>
     </Grid>
