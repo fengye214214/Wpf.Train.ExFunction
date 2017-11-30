@@ -79,13 +79,16 @@
         <Setter Property="IsTabStop" Value="false"/>
         <Setter Property="Focusable" Value="false"/>
         <Setter Property="ClickMode" Value="Press"/>
+        <Setter Property="Width" Value="20"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <Themes:ButtonChrome x:Name="Chrome" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" RenderMouseOver="{TemplateBinding IsMouseOver}" RenderPressed="{TemplateBinding IsPressed}" RoundCorners="false" SnapsToDevicePixels="true" Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}">
+                    <Border x:Name="PARTH_togBorder" Margin="0 1 1 1">
+                    <!--<Themes:ButtonChrome x:Name="Chrome" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" RenderMouseOver="{TemplateBinding IsMouseOver}" RenderPressed="{TemplateBinding IsPressed}" RoundCorners="false" SnapsToDevicePixels="true" Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}">-->
                         <!--<Path x:Name="Arrow" Data="{StaticResource DownArrowGeometry}" Fill="Black" HorizontalAlignment="Center" Margin="0,1,0,0" VerticalAlignment="Center"/>-->
-                        <TextBlock Text="&#xe64b;" x:Name="Arrow" Foreground="#2F71A4" Style="{StaticResource FIcon}" ></TextBlock>
-                    </Themes:ButtonChrome>
+                        <TextBlock Text="&#xe64b;" x:Name="Arrow" Cursor="Hand" FontSize="15" Margin="3 0 3 0" Foreground="{DynamicResource TextForeground}" Style="{StaticResource FIcon}" ></TextBlock>
+                    </Border>
+                    <!--</Themes:ButtonChrome>-->
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="true">
                             <!--<Setter Property="RenderPressed" TargetName="Chrome" Value="true"/>-->
@@ -93,6 +96,40 @@
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
                             <!--<Setter Property="Fill" TargetName="Arrow" Value="#AFAFAF"/>-->
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <!--<Setter Property="Background"  Value="Red" TargetName="Chrome"/>-->
+                            <Setter Property="Background"  Value="{DynamicResource ButtonMouseOverBackground}" TargetName="PARTH_togBorder"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--下拉条目样式-->
+    <Style TargetType="ComboBoxItem" x:Key="ComboBoxItemStyle">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="RenderOptions.ClearTypeHint" Value="Enabled" />
+        <Setter Property="BorderThickness" Value="0" />
+        <!--<Setter Property="Height" Value="28" />-->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComboBoxItem">
+                    <Grid Background="{TemplateBinding Background}" Margin="0,0.5">
+                        <Border x:Name="ItemBackground" IsHitTestVisible="False" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}"
+                                Background="{TemplateBinding Background}" />
+                        <ContentPresenter x:Name="contentPresenter" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="ItemBackground" Property="Background" Value="{DynamicResource ItemsPresenterMouseHoverBackground}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ItemBackground" Property="Background" Value="{DynamicResource ItemsPresenterMouseHoverBackground}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -105,6 +142,7 @@
         <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorad}"/>
         <Setter Property="Background" Value="{DynamicResource TextBoxBackground}"/>
         <Setter Property="Foreground" Value="{DynamicResource TextForeground}"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource ComboBoxItemStyle}" />
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
@@ -121,7 +159,7 @@
                             <Themes:SystemDropShadowChrome x:Name="Shdw" Color="Transparent" MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{Binding ActualWidth, ElementName=Placement}">
                                 <Border x:Name="DropDownBorder" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" Background="{TemplateBinding Background}">
                                     <ScrollViewer>
-                                        <ItemsPresenter  KeyboardNavigation.DirectionalNavigation="Contained" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                        <ItemsPresenter   KeyboardNavigation.DirectionalNavigation="Contained" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
                                     </ScrollViewer>
                                 </Border>
                             </Themes:SystemDropShadowChrome>

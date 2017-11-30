@@ -29,4 +29,6 @@
     <!--文本汉字颜色-->
     <SolidColorBrush x:Key="TextForeground" Color="Black"/>
 
+    <!--下拉框列表选项悬浮原色-->
+    <SolidColorBrush x:Key="ItemsPresenterMouseHoverBackground" Color="#3399FF"/>
 </ResourceDictionary>

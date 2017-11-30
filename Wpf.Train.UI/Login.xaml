@@ -32,7 +32,7 @@
             <TextBox Grid.Row="2" Grid.Column="1" x:Name="txt_serverIP" Visibility="Collapsed" Text="{Binding ServerIP,Mode=TwoWay}" Grid.ColumnSpan="2"/>
 
             <Label Grid.Row="3" Grid.Column="0" Content="本机IP"/>
-            <ComboBox Grid.Row="3" Grid.Column="1" x:Name="txt_hostIP" ItemsSource="{Binding HostIP}" SelectedValue="{Binding SelectHostIP,Mode=TwoWay}" Text="{Binding SelectHostIP,Mode=TwoWay}" Grid.ColumnSpan="2"/>
+            <zed:ExComboBox Grid.Row="3" Grid.Column="1" x:Name="txt_hostIP" ItemsSource="{Binding HostIP}" SelectedValue="{Binding SelectHostIP,Mode=TwoWay}" Text="{Binding SelectHostIP,Mode=TwoWay}" Grid.ColumnSpan="2"/>
 
             <StackPanel Grid.Row="4" Grid.ColumnSpan="3" Grid.Column="0" Margin="2" Orientation="Horizontal" VerticalAlignment="Center">
                 <Button x:Name="btn_login" Width="80" Margin="60,0,0,0" Content="登录" VerticalAlignment="Center" Click="btn_login_Click"/>

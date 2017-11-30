@@ -27,4 +27,7 @@
     <SolidColorBrush x:Key="TextBoxBorad" Color="#B7D9ED"/>
     <!--文本汉字颜色-->
     <SolidColorBrush x:Key="TextForeground" Color="#F1F1F1"/>
+
+    <!--下拉框列表选项悬浮原色-->
+    <SolidColorBrush x:Key="ItemsPresenterMouseHoverBackground" Color="#3D4350"/>
 </ResourceDictionary>
