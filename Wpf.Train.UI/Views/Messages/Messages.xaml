@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Wpf.Train.UI"
       xmlns:cus ="clr-namespace:Wpf.Train.CustomControlLib;assembly=Wpf.Train.CustomControlLib"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="1000" Loaded="PageBase_Loaded"
+      d:DesignHeight="300" d:DesignWidth="1000" Loaded="PageBase_Loaded" x:Name="main"
 	Title="Messages">
 
     <Grid>
@@ -37,6 +37,52 @@
                 <cus:TextBoxWatermark Margin="3,3,0,0" Width="250" Height="25" AttButtonType="OpenFilePathDialog" Watermark="打开文件路径..."></cus:TextBoxWatermark>
                 <cus:ExComboBox x:Name="exCom" Margin="3,3,0,0" Width="100"></cus:ExComboBox>
             </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <GroupBox Header="MVVM">
+                        <StackPanel Orientation="Vertical">
+                            <cus:TextBoxWatermark x:Name="txt_text" Margin="5" Width="150" Text="{Binding Value, Mode=TwoWay,ElementName=sli_dis}"></cus:TextBoxWatermark>
+                            <Slider x:Name="sli_dis" Maximum="100" Value="{Binding Text, Mode=TwoWay,ElementName=txt_text}"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <GroupBox Header="MVVM-TreeView">
+                        <StackPanel Orientation="Vertical">
+                            <TreeView x:Name ="tv_totalPersonList">
+                                <TreeView.ItemContainerStyle>
+                                    <Style TargetType="TreeViewItem">
+                                        <Setter Property="IsExpanded" Value="{Binding IsNodeExpanded,Mode=TwoWay}"></Setter>
+                                    </Style>
+                                </TreeView.ItemContainerStyle>
+                                <TreeView.ItemTemplate>
+                                    <HierarchicalDataTemplate ItemsSource="{Binding ChildrenList}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <CheckBox VerticalAlignment="Center" Tag="{Binding NodeData}" IsChecked="{Binding IsChecked, Mode=TwoWay}"></CheckBox>
+                                            <TextBlock Margin="5 0 0 0" Foreground="#007ACC" Style="{StaticResource FIcon}" Text="{Binding NodeImage,Mode=TwoWay}"></TextBlock>
+                                            <TextBlock FontSize="15" TextAlignment="Left" Text="{Binding NodeName}" Tag="{Binding NodeData}"></TextBlock>
+                                        </StackPanel>
+                                    </HierarchicalDataTemplate>
+                                </TreeView.ItemTemplate>
+                            </TreeView>
+                            <Button x:Name="btn_add" Content="添加结点" Margin="5" Click="btn_add_Click"/>
+                            <Button x:Name="btn_Re" Content="重新加载" Margin="5" Click="btn_Re_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <GroupBox Header="依赖属性">
+                        <StackPanel Orientation="Vertical" Margin="5">
+                            <TextBox x:Name="txt_testTxt" Height="30" Width="100" Text="{Binding MyTestProperty, ElementName=main, Mode=TwoWay}" VerticalAlignment="Top"/>
+                            <Button x:Name="btn_ch" Content="改变值" Margin="5" Click="btn_ch_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </StackPanel>
+            
         </StackPanel>
 
     </Grid>

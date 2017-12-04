@@ -2,9 +2,9 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:zed="clr-namespace:Wpf.Train.CustomControlLib;assembly=Wpf.Train.CustomControlLib"
-                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-                mc:Ignorable="d"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
         Title="登陆" Height="196"  Width="300" ResizeMode="NoResize"  Loaded="WindowBase_Loaded" Style="{StaticResource WinContainTitleStyle}">
     <Grid>
         <!--Region 登录Gird-->

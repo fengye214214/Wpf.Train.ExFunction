@@ -23,5 +23,6 @@
     <!--最后设置基本控件的默认样式-->
     <!--此处必须用静态 StaticResource-->
     <Style TargetType="Label" BasedOn="{StaticResource LabelBaseStyle}"></Style>
+    <!--默认Button样式-->
     <Style TargetType="Button" BasedOn="{StaticResource ButtonBaseStyle}"/>
 </ResourceDictionary>
