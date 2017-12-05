@@ -63,6 +63,9 @@ namespace Wpf.Train.UI
             com_changeSkin.ItemsSource = SkinViewModel.SkinResList;
             //测试
             com_changeSkin.SelectedIndex = 0;
+
+            com_changeLang.ItemsSource = LangueViewModel.LangueResList;
+            com_changeLang.SelectedIndex = 0;
         }
 
         #region 页面导航
@@ -154,8 +157,12 @@ namespace Wpf.Train.UI
             Application.Current.Shutdown();
         }
 
-
-
-
+        private void com_changeLang_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var cb = sender as ComboBox;
+            var langueModel = cb.SelectedItem as LangueViewModel;
+            var langueViewModel = new LangueViewModel();
+            langueViewModel.ChangeLangue(langueModel);
+        }
     }
 }

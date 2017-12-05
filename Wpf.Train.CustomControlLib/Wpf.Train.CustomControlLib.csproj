@@ -69,8 +69,14 @@
     <Compile Include="Controls\ExComboBox.xaml.cs">
       <DependentUpon>ExComboBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ExDateTimePicker.xaml.cs">
+      <DependentUpon>ExDateTimePicker.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ImgButton.xaml.cs">
       <DependentUpon>ImgButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MultipleComboBox.xaml.cs">
+      <DependentUpon>MultipleComboBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\TextBoxWatermark.xaml.cs">
       <DependentUpon>TextBoxWatermark.xaml</DependentUpon>
@@ -86,6 +92,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\ExDateTimePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\ImgButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -93,6 +103,10 @@
     <Page Include="Controls\MessageBoxEx.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MultipleComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\TextBoxWatermark.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -248,14 +262,15 @@
     <Folder Include="Converter\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ImgResources\public_gb.png" />
+    <Resource Include="ImgResources\communication_organization_yrjhwzk.png" />
+    <Resource Include="ImgResources\communication_organization_yrjhzk.png" />
     <Resource Include="ImgResources\deltext.png" />
-    <Resource Include="ImgResources\mainwnd_close.png" />
-    <Resource Include="ImgResources\btn_close.png" />
     <Content Include="ImgResources\FontImage\demo.css" />
     <Content Include="ImgResources\FontImage\demo.html" />
     <Content Include="ImgResources\FontImage\iconfont.css" />
     <Resource Include="ImgResources\FontImage\Remark.txt" />
+    <Resource Include="ImgResources\tree_tvwall_monitor_list1.png" />
+    <Resource Include="ImgResources\tree_tvwall_monitor_list3.png" />
     <Content Include="Lib\Microsoft.Windows.Shell.dll" />
     <Content Include="Lib\WPFToolkit.dll" />
     <Content Include="Lib\WPFVisifire.Charts.dll" />

@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!--主界面导航按钮-->
+    <sys:String x:Key="DispatcherBtnFirst">DisFirst</sys:String>
+    <sys:String x:Key="DispatcherBtnSecond">DisSecond</sys:String>
+    <sys:String x:Key="ControlList">Controls</sys:String>
+    <sys:String x:Key="SampleNavigation">Navigation</sys:String>
+    <sys:String x:Key="ChangeSkin">ChangeSkin</sys:String>
+    <sys:String x:Key="ChangeLangue">ChangeLangue</sys:String>
+</ResourceDictionary>

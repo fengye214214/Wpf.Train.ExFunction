@@ -27,12 +27,14 @@
         </Border>
         <!--导航区域-->
         <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <Button x:Name="btn_voice" Content="调度页面一" Width="80" Margin="5" Click="btn_voice_Click"></Button>
-            <Button x:Name="btn_video" Content="调度页面二" Width="80" Margin="5" Click="btn_video_Click"></Button>
-            <Button x:Name="btn_msg" Content="控件展示" Width="80" Margin="5" Click="btn_msg_Click"></Button>
-            <Button x:Name="btn_demo" Content="示例导航" Width="80" Margin="5" Click="btn_demo_Click"/>
-            <Label Margin="5">换肤</Label>
+            <Button x:Name="btn_voice" Content="{DynamicResource DispatcherBtnFirst}" Width="80" Margin="5" Click="btn_voice_Click"></Button>
+            <Button x:Name="btn_video" Content="{DynamicResource DispatcherBtnSecond}" Width="80" Margin="5" Click="btn_video_Click"></Button>
+            <Button x:Name="btn_msg" Content="{DynamicResource ControlList}" Width="80" Margin="5" Click="btn_msg_Click"></Button>
+            <Button x:Name="btn_demo" Content="{DynamicResource SampleNavigation}" Width="80" Margin="5" Click="btn_demo_Click"/>
+            <Label Margin="5" Content="{DynamicResource ChangeSkin}"></Label>
             <ComboBox x:Name="com_changeSkin" Margin="0 5 5 5" Width="100" DisplayMemberPath="Remark" SelectionChanged="com_changeSkin_SelectionChanged"></ComboBox>
+            <Label Margin="5" Content="{DynamicResource ChangeLangue}"/>
+            <ComboBox x:Name="com_changeLang" Margin="0 5 5 5" Width="100" DisplayMemberPath="Remark" SelectionChanged="com_changeLang_SelectionChanged" ></ComboBox>
         </StackPanel>
         <!--内容区域-->
         <Frame Grid.Row="2" x:Name="main_frame"  NavigationUIVisibility="Hidden"></Frame>

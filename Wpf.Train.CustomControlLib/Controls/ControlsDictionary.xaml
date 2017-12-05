@@ -7,5 +7,7 @@
         <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Controls/ImgButton.xaml" />
         <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Controls/TextBoxWatermark.xaml" />
         <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Controls/ExComboBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Controls/ExDateTimePicker.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Wpf.Train.CustomControlLib;component/Controls/MultipleComboBox.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

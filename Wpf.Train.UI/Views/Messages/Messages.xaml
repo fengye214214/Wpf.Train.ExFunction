@@ -35,7 +35,17 @@
             <StackPanel Orientation="Horizontal" Margin="5">
                 <cus:TextBoxWatermark Margin="3,3,0,0" Width="150" Watermark="我是水印" ></cus:TextBoxWatermark>
                 <cus:TextBoxWatermark Margin="3,3,0,0" Width="250" Height="25" AttButtonType="OpenFilePathDialog" Watermark="打开文件路径..."></cus:TextBoxWatermark>
-                <cus:ExComboBox x:Name="exCom" Margin="3,3,0,0" Width="100"></cus:ExComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <cus:ExComboBox x:Name="exCom" Margin="3,3,0,0" Width="150"></cus:ExComboBox>
+                <cus:MultipleComboBox x:Name="com_mul" Margin="3,3,0,0" Width="150"></cus:MultipleComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <cus:ExDateTimePicker Margin="5 0 0 0"  Width="160" Height="30"/>
+                <cus:ExDateTimePicker Margin="5 0 0 0" IsTextEmpty="False" IsStartTime="True" Width="160" Height="30" FIcon="323"/>
+                <cus:ExDateTimePicker Margin="5 0 0 0" IsTextEmpty="False" IsEndTime="True" Width="160" Height="30" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="5">
@@ -78,10 +88,18 @@
                         <StackPanel Orientation="Vertical" Margin="5">
                             <TextBox x:Name="txt_testTxt" Height="30" Width="100" Text="{Binding MyTestProperty, ElementName=main, Mode=TwoWay}" VerticalAlignment="Top"/>
                             <Button x:Name="btn_ch" Content="改变值" Margin="5" Click="btn_ch_Click"/>
+                            <ListBox Margin="5">
+                                <ListBoxItem>消息一</ListBoxItem>
+                                <ListBoxItem>消息二</ListBoxItem>
+                                <ListBoxItem>消息三</ListBoxItem>
+                                <ListBoxItem>消息四</ListBoxItem>
+                                <ListBoxItem>消息五</ListBoxItem>
+                            </ListBox>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
             </StackPanel>
+
             
         </StackPanel>
 

@@ -70,9 +70,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\LangueViewModel.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\IVMSTreeListViewModel.cs" />
     <Compile Include="ViewModels\TreeViewListViewModel.cs" />
     <Compile Include="ViewModels\SubscriberInfoViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
@@ -95,6 +97,14 @@
     <Compile Include="Views\VoiceDispatch\VoiceDispatch.xaml.cs">
       <DependentUpon>VoiceDispatch.xaml</DependentUpon>
     </Compile>
+    <Page Include="Language\EN_US.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Language\ZH_CN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -160,6 +170,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -188,6 +199,13 @@
       <Project>{77dbf6ea-4d58-4298-a106-b3a29e9e3dc5}</Project>
       <Name>Wpf.Train.Entiry</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ZED.IVMS7200\ZED.IVMS7200.csproj">
+      <Project>{da7384f7-896d-4a29-9209-0d8673375356}</Project>
+      <Name>ZED.IVMS7200</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Language\ALangueConfig.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

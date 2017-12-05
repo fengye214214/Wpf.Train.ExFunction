@@ -53,6 +53,8 @@ namespace Wpf.Train.UI
             exCom.ItemsSource = list;
 
             InitUserTreeList();
+
+            com_mul.ItemsSource = list;
         }
 
         private void InitUserTreeList()
