@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Mail;
+using System.Net.Sockets;
 using System.Reflection;
 using System.Text;
 using System.Windows;
@@ -103,7 +106,7 @@ namespace Wpf.Train.UI
         }
 
         private void btn_voice_Click(object sender, RoutedEventArgs e)
-        {   
+        {
             //语音调度
             Navigation(VoiceDispatchPage);
         }

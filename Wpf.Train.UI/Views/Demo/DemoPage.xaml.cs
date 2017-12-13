@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -40,6 +41,16 @@ namespace Wpf.Train.UI
             }
         }
 
+        private ObservableCollection<IssueViewModel> issueList = new ObservableCollection<IssueViewModel>();
+        public ObservableCollection<IssueViewModel> IssueList
+        {
+            get { return issueList; }
+            set
+            {
+                issueList = value;
+                Dispatcher.BeginInvoke(new Action(() => { dg_issueList.ItemsSource = issueList; }));
+            }
+        }
         #endregion
 
         public DemoPage()
@@ -106,6 +117,31 @@ namespace Wpf.Train.UI
                 }
                 DeviceTreeList = orgList.Data;
             }), "获取组织机构...");
+        }
+
+        private void ImgButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var issueModel = new IssueViewModel();
+                WaitingWinBox.ShowDialog(new Action(() =>
+                {
+                    var result = issueModel.GetIssueList();
+                    if (!result.success)
+                    {
+                        Dispatcher.BeginInvoke(new Action(() =>
+                        {
+                            MessageBoxEx.ShowError(result.message);
+                        }));
+                        return;
+                    }
+                    IssueList = result.data;
+                }), "获取数据...");
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

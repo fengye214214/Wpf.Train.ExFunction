@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +33,8 @@ namespace Wpf.Train.Common
             //日期类型默认格式化处理
             setting.DateFormatHandling = Newtonsoft.Json.DateFormatHandling.MicrosoftDateFormat;
             setting.DateFormatString = "yyyy-MM-dd HH:mm:ss";
+
+            setting.ContractResolver = new CamelCasePropertyNamesContractResolver();
             //空值处理
             setting.NullValueHandling = NullValueHandling.Ignore;
             return JsonConvert.DeserializeObject<ResponseCmd<T>>(data, setting);

@@ -20,7 +20,7 @@ namespace Wpf.Train.Common
         /// <summary>
         /// 返回的数据
         /// </summary>
-        public T Data { get => data; set => data = value; }
+        public T Data;
 
     }
 }
