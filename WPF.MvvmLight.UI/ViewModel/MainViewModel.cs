@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using System.Threading;
 using WPF.MvvmLight.UI.Model;
 
 namespace WPF.MvvmLight.UI.ViewModel
@@ -10,7 +11,8 @@ namespace WPF.MvvmLight.UI.ViewModel
     /// </para>
     /// </summary>
     public class MainViewModel : ViewModelBase
-    {
+    {   
+        
         private readonly IDataService _dataService;
 
         /// <summary>
@@ -36,6 +38,8 @@ namespace WPF.MvvmLight.UI.ViewModel
             }
         }
 
+        
+
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
@@ -52,6 +56,8 @@ namespace WPF.MvvmLight.UI.ViewModel
                     }
 
                     WelcomeTitle = item.Title;
+
+                    WelcomeTitle = "测试多少度";
                 });
         }
 

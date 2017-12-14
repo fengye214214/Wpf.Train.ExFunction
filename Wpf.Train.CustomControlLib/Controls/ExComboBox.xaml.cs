@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace Wpf.Train.CustomControlLib
 {
     /// <summary>
-    /// ExComboBox.xaml 的交互逻辑
+    /// ExComboBox.xaml 的交互逻辑111
     /// </summary>
     public partial class ExComboBox : ComboBox
     {

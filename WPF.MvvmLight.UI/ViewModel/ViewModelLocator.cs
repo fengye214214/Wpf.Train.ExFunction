@@ -60,6 +60,7 @@ namespace WPF.MvvmLight.UI.ViewModel
         /// </summary>
         public static void Cleanup()
         {
+           
         }
     }
 }
