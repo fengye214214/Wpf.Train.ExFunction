@@ -29,14 +29,17 @@ namespace Wpf.Train.Common
         /// <returns></returns>
         public static ResponseCmd<T> CreateResponseCmd(string data)
         {
-            Newtonsoft.Json.JsonSerializerSettings setting = new Newtonsoft.Json.JsonSerializerSettings();
-            //日期类型默认格式化处理
-            setting.DateFormatHandling = Newtonsoft.Json.DateFormatHandling.MicrosoftDateFormat;
-            setting.DateFormatString = "yyyy-MM-dd HH:mm:ss";
-
-            setting.ContractResolver = new CamelCasePropertyNamesContractResolver();
-            //空值处理
-            setting.NullValueHandling = NullValueHandling.Ignore;
+            var setting = new JsonSerializerSettings()
+            {
+                //日期类型默认格式化处理
+                DateFormatHandling = DateFormatHandling.MicrosoftDateFormat,
+                //日期格式
+                DateFormatString = "yyyy-MM-dd HH:mm:ss",
+                //字段首字母消息
+                ContractResolver = new CamelCasePropertyNamesContractResolver(),
+                //空值处理
+                NullValueHandling = NullValueHandling.Ignore
+            };
             return JsonConvert.DeserializeObject<ResponseCmd<T>>(data, setting);
         }
     }

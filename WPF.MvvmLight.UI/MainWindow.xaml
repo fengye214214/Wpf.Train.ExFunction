@@ -27,6 +27,7 @@
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    TextWrapping="Wrap" />
+        <Button Content="测试" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding CommitCommand}"/>
 
     </Grid>
 </Window>

@@ -1,0 +1,25 @@
+﻿<Window x:Class="WPF.MvvmLight.UI.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF.MvvmLight.UI"
+        mc:Ignorable="d"
+        Title="登录" Height="108" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="账号"/>
+        <TextBox Grid.Row="0" Grid.Column="1"></TextBox>
+        <Label Grid.Row="1" Grid.Column="0" Content="密码"/>
+        <TextBox Grid.Row="1" Grid.Column="1"/>
+        <Button Grid.Row="2" Grid.ColumnSpan="2" Content="登录" Width="100"/>
+    </Grid>
+</Window>

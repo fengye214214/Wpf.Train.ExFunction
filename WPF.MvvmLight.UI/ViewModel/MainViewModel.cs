@@ -1,4 +1,8 @@
 ﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Views;
+using MvvmDialogs;
+using MvvmDialogs.FrameworkDialogs.OpenFile;
 using System.Threading;
 using WPF.MvvmLight.UI.Model;
 
@@ -12,8 +16,14 @@ namespace WPF.MvvmLight.UI.ViewModel
     /// </summary>
     public class MainViewModel : ViewModelBase
     {   
-        
+        /// <summary>
+        /// 数据服务
+        /// </summary>
         private readonly IDataService _dataService;
+        /// <summary>
+        /// 窗口服务
+        /// </summary>
+        private readonly MvvmDialogs.IDialogService DialogService;
 
         /// <summary>
         /// The <see cref="WelcomeTitle" /> property's name.
@@ -38,7 +48,7 @@ namespace WPF.MvvmLight.UI.ViewModel
             }
         }
 
-        
+        public RelayCommand CommitCommand { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
@@ -46,6 +56,8 @@ namespace WPF.MvvmLight.UI.ViewModel
         public MainViewModel(IDataService dataService)
         {
             _dataService = dataService;
+            DialogService = new DialogService();
+
             _dataService.GetData(
                 (item, error) =>
                 {
@@ -59,6 +71,19 @@ namespace WPF.MvvmLight.UI.ViewModel
 
                     WelcomeTitle = "测试多少度";
                 });
+
+            CommitCommand = new RelayCommand(() => 
+            {
+                var settings = new OpenFileDialogSettings
+                {
+                    Title = "Open",
+                    Filter = "Sample (.xml)|*.xml",
+                    CheckFileExists = false
+                };
+
+                bool? success = DialogService.ShowOpenFileDialog(this, settings);
+
+            });
         }
 
         ////public override void Cleanup()
