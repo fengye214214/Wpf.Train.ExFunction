@@ -2,20 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Text;
 
 namespace Wpf.Train.Common
-{   
-    /// <summary>
-    /// 工具类
-    /// </summary>
-    public class ComUtils
+{
+    public class IPAddressHelper
     {
         /// <summary>
         /// 获取本机IP地址
         /// </summary>
         /// <returns></returns>
-        public static List<String> GetLocalAddressIP()
+        public static List<String> GetAllAddressIP()
         {
             var list = new List<String>();
             Dns.GetHostEntry(Dns.GetHostName()).AddressList.ToList().ForEach(x =>

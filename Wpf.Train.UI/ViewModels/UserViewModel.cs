@@ -78,7 +78,7 @@ namespace Wpf.Train.UI
             get
             {
                 var list = new List<string>();
-                list = ComUtils.GetLocalAddressIP();
+                list = IPAddressHelper.GetAllAddressIP();
                 return list;
             }
         }

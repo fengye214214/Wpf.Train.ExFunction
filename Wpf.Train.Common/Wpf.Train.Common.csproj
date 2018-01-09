@@ -39,7 +39,10 @@
       <HintPath>Lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,16 +51,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ConfigHelper\ConfigsHelper.cs" />
     <Compile Include="CryptoHelper\MD5Encrypt.cs" />
+    <Compile Include="IPAddressHelper\IPAddressHelper.cs" />
+    <Compile Include="JsonHelper\RequestCmd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="JsonHelper\ResponseCmd.cs" />
     <Compile Include="SOPAHelper\SOAPResponseCmd.cs" />
-    <Compile Include="Utils\ComUtils.cs" />
+    <Compile Include="TimeHelper\TimerPlusClass.cs" />
+    <Compile Include="TimeHelper\TimesHelper.cs" />
     <Compile Include="XMLHelper\XMLHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="LogHelper\" />
-    <Folder Include="TimeHelper\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Lib\net40-full\log4net.dll" />

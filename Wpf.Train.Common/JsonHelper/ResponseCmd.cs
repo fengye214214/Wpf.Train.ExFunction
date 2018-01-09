@@ -7,8 +7,12 @@ using System.Text;
 
 namespace Wpf.Train.Common
 {
-    public class ResponseCmd<T>
+    public class ResponseCmd<T> where T : new()
     {
+        public ResponseCmd()
+        {
+            data = new T();
+        }
         /// <summary>
         /// 是否成功
         /// </summary>
