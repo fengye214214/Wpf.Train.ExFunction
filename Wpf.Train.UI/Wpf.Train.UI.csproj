@@ -41,10 +41,12 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ISymWrapper" />
     <Reference Include="Microsoft.Windows.Shell">
       <HintPath>..\Wpf.Train.CustomControlLib\Lib\Microsoft.Windows.Shell.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net" />
@@ -75,6 +77,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ConsumerViewModel.cs" />
     <Compile Include="ViewModels\IssueViewModel.cs" />
     <Compile Include="ViewModels\LangueViewModel.cs" />
     <Compile Include="Login.xaml.cs">
@@ -84,6 +87,12 @@
     <Compile Include="ViewModels\TreeViewListViewModel.cs" />
     <Compile Include="ViewModels\SubscriberInfoViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="Views\CustomRegOne.xaml.cs">
+      <DependentUpon>CustomRegOne.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Demo\CustomReg.xaml.cs">
+      <DependentUpon>CustomReg.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Demo\NewWindow.xaml.cs">
       <DependentUpon>NewWindow.xaml</DependentUpon>
     </Compile>
@@ -112,6 +121,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CustomRegOne.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Demo\CustomReg.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

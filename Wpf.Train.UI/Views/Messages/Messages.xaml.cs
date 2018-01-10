@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Wpf.Train.CustomControlLib;
 using Wpf.Train.Entiry;
+using Wpf.Train.UI.Views;
 
 namespace Wpf.Train.UI
 {
@@ -195,6 +196,23 @@ namespace Wpf.Train.UI
         private void btn_ch_Click(object sender, RoutedEventArgs e)
         {
             MyTestProperty = "改变";
+        }
+
+        private void ImgButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_verf_Click(object sender, RoutedEventArgs e)
+        {
+            var verForm = new CustomReg();
+            verForm.Show();
+        }
+
+        private void btn_verf_Click1(object sender, RoutedEventArgs e)
+        {
+            var verForm = new CustomRegOne();
+            verForm.Show();
         }
     }
 }

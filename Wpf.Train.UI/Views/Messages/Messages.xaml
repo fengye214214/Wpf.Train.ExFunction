@@ -10,7 +10,9 @@
 	Title="Messages">
 
     <Grid>
-        <StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
             <Label Margin="5">调度页面三</Label>
 
             <StackPanel Orientation="Horizontal" Margin="5">
@@ -103,5 +105,12 @@
             
         </StackPanel>
 
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <cus:ImgButton FIcon="&#xe602;" x:Name="btn_verf" Margin="5 0 0 0" Click="btn_verf_Click">身份验证方法一</cus:ImgButton>
+                    <cus:ImgButton FIcon="&#xe602;" x:Name="btn_verf1" Margin="5 0 0 0" Click="btn_verf_Click1">身份验证方法二</cus:ImgButton>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </local:PageBase>
